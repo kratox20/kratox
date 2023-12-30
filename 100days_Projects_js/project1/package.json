@@ -1,0 +1,16 @@
+{
+  "name": "bino",
+  "version": "1.0.0",
+  "description": "this is my first node",
+  "main": "test.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yassine",
+  "license": "ISC",
+  "dependencies": {
+    "superheroes": "^3.0.0"
+  },
+  "devDependencies": {}
+}

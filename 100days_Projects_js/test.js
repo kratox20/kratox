@@ -1,15 +1,7 @@
-let area;
-let height;
-let width;
-
-height = window.prompt("enter height :");
-width = window.prompt("enter width :");
-
-area = getArea(height ,width);
-
-console.log("the area is : ", area);
-
-function getArea(height, width){
-    let result = height * width;
-    return result
-}
+import * as fs from 'fs';
+fs.writeFile('message.txt', (err) => {
+    if (err) {
+      console.error(err);
+    }
+    // file written successfully
+  });

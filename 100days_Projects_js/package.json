@@ -1,18 +1,22 @@
 {
-  "name": "kratox",
+  "name": "kratox1337",
   "version": "1.0.0",
   "main": "project.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "yassine",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "kratox"
   },
-  "description": "",
+  "description": "i will do 100 projects in 100 days and all projects are games",
   "dependencies": {
-    "prompt-sync": "^4.2.0"
+    "inquirer": "^9.2.12",
+    "prompt-sync": "^4.2.0",
+    "qr-image": "^3.2.0",
+    "superheroes": "^3.0.0"
   }
 }
