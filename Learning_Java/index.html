@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Length Unit Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input[type="number"], select, #result {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        .btn-container {
+            display: flex;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Length Unit Converter</h1>
+    <label for="numberInput">Enter Value:</label>
+    <input type="number" id="numberInput" placeholder="Enter value">
+    
+    <label for="fromSelect">From:</label>
+    <select id="fromSelect">
+        <option value="km">Kilometers</option>
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="mm">Millimeters</option>
+        <option value="um">Micrometers</option>
+        <option value="nm">Nanometers</option>
+        <option value="mi">Miles</option>
+        <option value="yd">Yards</option>
+        <option value="ft">Feet</option>
+        <option value="in">Inches</option>
+        <option value="nmi">Nautical Miles</option>
+        <!-- Add more options here for different units -->
+    </select>
+    
+    <label for="toSelect">To:</label>
+    <select id="toSelect">
+        <option value="km">Kilometers</option>
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="mm">Millimeters</option>
+        <option value="um">Micrometers</option>
+        <option value="nm">Nanometers</option>
+        <option value="mi">Miles</option>
+        <option value="yd">Yards</option>
+        <option value="ft">Feet</option>
+        <option value="in">Inches</option>
+        <option value="nmi">Nautical Miles</option>
+        <!-- Add more options here for different units -->
+    </select>
+    
+    <div class="btn-container">
+        <button onclick="convertUnits()">Convert</button>
+        <button onclick="clearResult()">Clear</button>
+    </div>
+
+    <p id="result"></p>
+
+    <script>
+        function convertUnits() {
+            const value = document.getElementById("numberInput").value;
+            const fromUnit = document.getElementById("fromSelect").value;
+            const toUnit = document.getElementById("toSelect").value;
+            let result;
+
+            const conversions = {
+                km: { m: 1000, cm: 100000, mm: 1000000, um: 1e+9, nm: 1e+12, mi: 0.621371, yd: 1093.61, ft: 3280.84, in: 39370.1, nmi: 0.539957 },
+                m: { km: 0.001, cm: 100, mm: 1000, um: 1e+6, nm: 1e+9, mi: 0.000621371, yd: 1.09361, ft: 3.28084, in: 39.3701, nmi: 0.000539957 },
+                cm: { km: 0.00001, m: 0.01, mm: 10, um: 10000, nm: 1e+7, mi: 6.2137e-6, yd: 0.0109361, ft: 0.0328084, in: 0.393701, nmi: 5.39957e-6 },
+                // Add more conversion rates for other units here
+            };
+
+            if (fromUnit !== toUnit) {
+                result = value * conversions[fromUnit][toUnit];
+                document.getElementById("result").innerHTML = `${value} ${fromUnit} is equal to ${result.toFixed(2)} ${toUnit}`;
+            } else {
+                document.getElementById("result").innerHTML = "Please select different units.";
+            }
+        }
+
+        function clearResult() {
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("numberInput").value = "";
+        }
+    </script>
+
+<div>
+    <h4>Is there a simple way to convert Kilometers to Miles in my head?</h4>
+    <p>
+        We have two methods to get a close value. The actual formula is mi = km * 0.62137119 but our methods are easier to do in your head.<br><br>
+        The first method is to multiply the kilometres value by 0.6.<br><br>
+        The second, more accurate method, is to multiply the kilometers value by 2 and then divide by 3.<br><br>
+        <strong>Worked Example:</strong><br><br>
+        1 kilometer x 0.6 = 0.6 miles<br><br>
+        Second method: 1 kilometer * 2 = 2.0, 2 / 3 = 0.666667 miles<br><br>
+        The actual answer is 0.62137119 miles, so these methods are close enough for many purposes
+    </p>
+</div>
+
+</body>
+</html>
