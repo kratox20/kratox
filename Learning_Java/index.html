@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Length Unit Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             background-color: #f4f4f4;
         }
         h1 {
             margin-bottom: 20px;
             color: #333;
+            text-align: center;
         }
         label {
             font-size: 18px;
@@ -26,11 +26,12 @@
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            width: 200px;
+            width: 100%;
             margin-bottom: 10px;
         }
         .btn-container {
             display: flex;
+            justify-content: space-between;
         }
         button {
             padding: 10px 20px;
@@ -40,10 +41,133 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-right: 10px;
+            margin-top: 10px;
         }
         button:hover {
             background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .logo {
+            display: block;
+            margin: 20px auto; /* Adjust margin as needed */
+            max-width: 200px; /* Adjust maximum width */
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            input[type="number"], select, #result {
+                width: calc(50% - 20px);
+                margin-right: 20px;
+            }
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            button {
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-content p {
+            margin: 0;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icons li {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            /* Adjustments for smaller screens */
+            input[type="number"], select, #result {
+            width: calc(50% - 10px); /* Adjust the width */
+            margin-right: 10px;
+        }
+        .btn-container {
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center;
+        }
+        button {
+            width: 100%; /* Full-width buttons */
+            margin-top: 10px;
+        }
+
+        p, h4, h2 {
+            font-size: 14px; /* Adjust font size as needed */
+        }
+
+        table {
+            overflow-x: auto; /* Add horizontal scroll */
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
         }
     </style>
 </head>
@@ -130,6 +254,60 @@
         Second method: 1 kilometer * 2 = 2.0, 2 / 3 = 0.666667 miles<br><br>
         The actual answer is 0.62137119 miles, so these methods are close enough for many purposes
     </p>
+    <h4>How many Kilometers are in 1 Mile?</h4>
+    <p>
+        There are 1.609344 Kilometers in 1 Mile
+    </p>
+    <h4>How many Miles are in 1 Kilometer?</h4>
+    <p>There are 0.62137119 Miles in 1 Kilometer</p>
+    <h4>How long is 1 Kilometer?</h4>
+    <p>
+        <strong>1 Kilometer:</strong> The distance traveled in 9 to 12 minutes walking at a normal pace.<br><br>
+        <strong>4 Kilometers:</strong> The length of Central Park, NY.<br><br>
+        <strong>5 Kilometers:</strong> The furthest distance that can be seen on earth to the horizon.<br><br>
+        <strong>12,713.6 Kilometers:</strong> The distance from the North to South Pole.
+    </p>
+
+    <h4>How long is 1 Mile?</h4>
+    <p>
+        <strong>1 Mile:</strong> Distance walked in 15-20 minutes by an average person.<br><br>
+        <strong>2.5 Miles:</strong> Approximate length of Central Park, NY.<br><br>
+        <strong>3.1 Miles:</strong> The furthest distance that can be seen on earth to the horizon.<br><br>
+        <strong>7,900 Miles:</strong> The approximate distance from the North to South Pole.
+    </p>
+
+    <h2>Kilometers to Miles Conversion Table</h2>
+    
+    <table>
+        <tr>
+            <th>Kilometers</th>
+            <th>Miles</th>
+        </tr>
+        <tr>
+            <td>1 km</td>
+            <td>0.621 mi</td>
+        </tr>
+        <tr>
+            <td>5 km</td>
+            <td>3.106 mi</td>
+        </tr>
+        <tr>
+            <td>10 km</td>
+            <td>6.213 mi</td>
+        </tr>
+        <tr>
+            <td>50 km</td>
+            <td>31.069 mi</td>
+        </tr>
+        <!-- Add more rows for other conversions -->
+    </table>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 coconvert.com. All rights reserved.</p>
+        </div>
+    </footer>
+    
 </div>
 
 </body>
