@@ -2,237 +2,86 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Length Unit Converter</title>
+    <title>coconvert</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-        }
-        label {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #555;
-        }
-        input[type="number"], select, #result {
-            padding: 8px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .btn-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .logo {
-            display: block;
-            margin: 20px auto; /* Adjust margin as needed */
-            max-width: 200px; /* Adjust maximum width */
-        }
-
-        /* Media query for mobile devices */
-        @media (max-width: 768px) {
-            input[type="number"], select, #result {
-                width: calc(50% - 20px);
-                margin-right: 20px;
-            }
-            .btn-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            button {
-                margin-top: 10px;
-                width: 100%;
-            }
-        }
-        
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .footer-content p {
-            margin: 0;
-        }
-
-        .social-icons {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .social-icons li {
-            margin: 0 10px;
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-
-        @media (max-width: 768px) {
-            /* Adjustments for smaller screens */
-            input[type="number"], select, #result {
-            width: calc(50% - 10px); /* Adjust the width */
-            margin-right: 10px;
-        }
-        .btn-container {
-            flex-direction: column; /* Stack buttons vertically */
-            align-items: center;
-        }
-        button {
-            width: 100%; /* Full-width buttons */
-            margin-top: 10px;
-        }
-
-        p, h4, h2 {
-            font-size: 14px; /* Adjust font size as needed */
-        }
-
-        table {
-            overflow-x: auto; /* Add horizontal scroll */
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .footer-content p {
-            margin: 0;
-        }
-        }
-    </style>
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <body>
-    <h1>Length Unit Converter</h1>
-    <label for="numberInput">Enter Value:</label>
-    <input type="number" id="numberInput" placeholder="Enter value">
-    
-    <label for="fromSelect">From:</label>
-    <select id="fromSelect">
-        <option value="km">Kilometers</option>
-        <option value="m">Meters</option>
-        <option value="cm">Centimeters</option>
-        <option value="mm">Millimeters</option>
-        <option value="um">Micrometers</option>
-        <option value="nm">Nanometers</option>
-        <option value="mi">Miles</option>
-        <option value="yd">Yards</option>
-        <option value="ft">Feet</option>
-        <option value="in">Inches</option>
-        <option value="nmi">Nautical Miles</option>
-        <!-- Add more options here for different units -->
-    </select>
-    
-    <label for="toSelect">To:</label>
-    <select id="toSelect">
-        <option value="km">Kilometers</option>
-        <option value="m">Meters</option>
-        <option value="cm">Centimeters</option>
-        <option value="mm">Millimeters</option>
-        <option value="um">Micrometers</option>
-        <option value="nm">Nanometers</option>
-        <option value="mi">Miles</option>
-        <option value="yd">Yards</option>
-        <option value="ft">Feet</option>
-        <option value="in">Inches</option>
-        <option value="nmi">Nautical Miles</option>
-        <!-- Add more options here for different units -->
-    </select>
-    
-    <div class="btn-container">
-        <button onclick="convertUnits()">Convert</button>
-        <button onclick="clearResult()">Clear</button>
-    </div>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <center><h1>Length Unit Converter</h1></center>
+    <form id="conversion-form" class="form-horizontal" action="#" method="POST">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="value">Enter Value</label>
+                    <input type="number" name="value" id="value" class="form-control" placeholder="Enter value" aria-describedby="helpId">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                <label for="convertFrom">From</label>
+                <select id="convertFrom" class="form-control">
+                    <option value="km">Kilometers</option>
+                    <option value="m">Meters</option>
+                    <option value="cm">Centimeters</option>
+                    <option value="mm">Millimeters</option>
+                    <option value="um">Micrometers</option>
+                    <option value="nm">Nanometers</option>
+                    <option value="mi">Miles</option>
+                    <option value="yd">Yards</option>
+                    <option value="ft">Feet</option>
+                    <option value="in">Inches</option>
+                    <option value="nmi">Nautical Miles</option>
+                    <!-- Add more options here for different units -->
+                </select>
+                </div>
+            </div> 
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="convertTo">To</label>
+                    <select id="convertTo" class="form-control">
+                        <option value="km">Kilometers</option>
+                        <option value="m">Meters</option>
+                        <option value="cm">Centimeters</option>
+                        <option value="mm">Millimeters</option>
+                        <option value="um">Micrometers</option>
+                        <option value="nm">Nanometers</option>
+                        <option value="mi">Miles</option>
+                        <option value="yd">Yards</option>
+                        <option value="ft">Feet</option>
+                        <option value="in">Inches</option>
+                        <option value="nmi">Nautical Miles</option>
+                        <!-- Add more options here for different units -->
+                    </select>
+                </div>
+            </div>
+        </div>
 
-    <p id="result"></p>
+        <div class="form-group">
+            <div class="text-center">
+                <button class="btn btn-primary">Convert</button>
+            </div>
+        </div>
+    
+    </form>
+
+    <div id="result"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <script>
+        let form = document.getElementById("conversion-form");
+        form.addEventListener("click", function(e) {
+            e.preventDefault();
+            convertUnits();
+        })
         function convertUnits() {
-            const value = document.getElementById("numberInput").value;
-            const fromUnit = document.getElementById("fromSelect").value;
-            const toUnit = document.getElementById("toSelect").value;
+            const value = document.getElementById("value").value;
+            const fromUnit = document.getElementById("convertFrom").value;
+            const toUnit = document.getElementById("convertTo").value;
             let result;
+
+            console.log("Convert value " + value + " from " + fromUnit + " to " + toUnit);
 
             const conversions = {
                 km: { m: 1000, cm: 100000, mm: 1000000, um: 1e+9, nm: 1e+12, mi: 0.621371, yd: 1093.61, ft: 3280.84, in: 39370.1, nmi: 0.539957 },
@@ -248,7 +97,7 @@
                 nmi: { km: 1.852, m: 1852, cm: 185200, mm: 1.852e+6, um: 1.852e+9, nm: 1.852e+12, mi: 1.15078, yd: 2025.37, ft: 6076.12, in: 72913.4 }
                 // Add more conversion rates for other units here
             };
-            
+
             if (fromUnit !== toUnit) {
                 result = value * conversions[fromUnit][toUnit];
                 document.getElementById("result").innerHTML = `${value} ${fromUnit} is equal to ${result.toFixed(2)} ${toUnit}`;
@@ -263,7 +112,7 @@
         }
     </script>
 
-<div>
+<div class="mt-5">
     <h4>Is there a simple way to convert Kilometers to Miles in my head?</h4>
     <p>
         We have two methods to get a close value. The actual formula is mi = km * 0.62137119 but our methods are easier to do in your head.<br><br>
@@ -298,7 +147,7 @@
 
     <h2>Kilometers to Miles Conversion Table</h2>
     
-    <table>
+    <table class="table table-striped">
         <tr>
             <th>Kilometers</th>
             <th>Miles</th>
@@ -352,11 +201,21 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 coconvert.com. All rights reserved.</p>
+            <img src="path_to_your_logo" alt="Your Logo" class="footer-logo">
+            <div class="footer-links">
+                <a href="#">Buy me a coffee</a>
+                <!-- Add more links as needed -->
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Linkedin</a>
+                <!-- Add more social links/icons as needed -->
+            </div>
+            <p>&copy; 2024 YourWebsite.com. All rights reserved.</p>
         </div>
-    </footer>
-    
-</div>
+    </footer> 
 
+</div>
+    </div>
 </body>
 </html>
