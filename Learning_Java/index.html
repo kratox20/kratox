@@ -58,7 +58,7 @@
 
         <div class="form-group">
             <div class="text-center">
-                <button class="btn btn-primary">Convert</button>
+                <button class="btn btn-primary mt-3 mb-0">Convert</button>
             </div>
         </div>
     
@@ -110,6 +110,7 @@
             document.getElementById("result").innerHTML = "";
             document.getElementById("numberInput").value = "";
         }
+
     </script>
 
 <div class="mt-5">
@@ -199,22 +200,31 @@
         <!-- Add more rows for other conversions -->
     </table>
 
-    <footer>
-        <div class="footer-content">
-            <img src="path_to_your_logo" alt="Your Logo" class="footer-logo">
-            <div class="footer-links">
-                <a href="#">Buy me a coffee</a>
-                <!-- Add more links as needed -->
-            </div>
-            <div class="footer-social">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">Linkedin</a>
-                <!-- Add more social links/icons as needed -->
-            </div>
-            <p>&copy; 2024 YourWebsite.com. All rights reserved.</p>
+    <footer class="bg-body-tertiary text-center">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <button type="button" class="btn btn-primary btn-rounded" data-mdb-ripple-init>Linekdin</button>
+            <button type="button" class="btn btn-primary btn-rounded" style="background-color: #c32aa3;" data-mdb-ripple-init>Instagram</button> 
+            <button type="button" class="btn btn-success btn-rounded" data-mdb-ripple-init>Facebook</button>
+            <button type="button" class="btn btn-danger btn-rounded" data-mdb-ripple-init>Buy me a coffee</button>
+            <br><br>
+                <button id="lightModeBtn" type="button" class="btn btn-light">Light</button>
+                <button id="darkModeBtn" type="button" class="btn btn-dark">Dark</button>
+            <!-- Section: Social media -->
         </div>
-    </footer> 
-
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2020 Copyright:
+          <a class="text-body" href="https://mdbootstrap.com/">CoConvert.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      
 </div>
     </div>
 </body>
