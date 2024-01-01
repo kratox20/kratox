@@ -168,6 +168,18 @@
             bottom: 0;
             width: 100%;
         }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-content p {
+            margin: 0;
+        }
         }
     </style>
 </head>
@@ -226,9 +238,17 @@
                 km: { m: 1000, cm: 100000, mm: 1000000, um: 1e+9, nm: 1e+12, mi: 0.621371, yd: 1093.61, ft: 3280.84, in: 39370.1, nmi: 0.539957 },
                 m: { km: 0.001, cm: 100, mm: 1000, um: 1e+6, nm: 1e+9, mi: 0.000621371, yd: 1.09361, ft: 3.28084, in: 39.3701, nmi: 0.000539957 },
                 cm: { km: 0.00001, m: 0.01, mm: 10, um: 10000, nm: 1e+7, mi: 6.2137e-6, yd: 0.0109361, ft: 0.0328084, in: 0.393701, nmi: 5.39957e-6 },
+                mm: { km: 1e-6, m: 0.001, cm: 0.1, um: 1000, nm: 1e+6, mi: 6.2137e-7, yd: 0.00109361, ft: 0.00328084, in: 0.0393701, nmi: 5.39957e-7 },
+                um: { km: 1e-9, m: 1e-6, cm: 0.0001, mm: 0.001, nm: 1000, mi: 6.2137e-10, yd: 1.0936e-6, ft: 3.28084e-6, in: 3.93701e-5, nmi: 5.39957e-10 },
+                nm: { km: 1e-12, m: 1e-9, cm: 1e-7, mm: 1e-6, um: 0.001, mi: 6.2137e-13, yd: 1.09361e-9, ft: 3.28084e-9, in: 3.93701e-8, nmi: 5.39957e-13 },
+                mi: { km: 1.60934, m: 1609.34, cm: 160934, mm: 1.609e+6, um: 1.609e+9, nm: 1.609e+12, yd: 1760, ft: 5280, in: 63360, nmi: 0.868976 },
+                yd: { km: 0.0009144, m: 0.9144, cm: 91.44, mm: 914.4, um: 914400, nm: 9.144e+8, mi: 0.000568182, ft: 3, in: 36, nmi: 0.000493737 },
+                ft: { km: 0.0003048, m: 0.3048, cm: 30.48, mm: 304.8, um: 304800, nm: 3.048e+8, mi: 0.000189394, yd: 0.333333, in: 12, nmi: 0.000164579 },
+                in: { km: 2.54e-5, m: 0.0254, cm: 2.54, mm: 25.4, um: 25400, nm: 2.54e+7, mi: 1.5783e-5, yd: 0.0277778, ft: 0.0833333, nmi: 1.37149e-5 },
+                nmi: { km: 1.852, m: 1852, cm: 185200, mm: 1.852e+6, um: 1.852e+9, nm: 1.852e+12, mi: 1.15078, yd: 2025.37, ft: 6076.12, in: 72913.4 }
                 // Add more conversion rates for other units here
             };
-
+            
             if (fromUnit !== toUnit) {
                 result = value * conversions[fromUnit][toUnit];
                 document.getElementById("result").innerHTML = `${value} ${fromUnit} is equal to ${result.toFixed(2)} ${toUnit}`;
@@ -296,8 +316,36 @@
             <td>6.213 mi</td>
         </tr>
         <tr>
+            <td>15 km</td>
+            <td>9.32057 mi</td>
+        </tr>
+        <tr>
+            <td>20 km</td>
+            <td>12.4274 mi</td>
+        </tr>
+        <tr>
+            <td>25 km</td>
+            <td>15.5343 mi</td>
+        </tr>
+        <tr>
+            <td>30 km</td>
+            <td>18.6411 mi</td>
+        </tr>
+        <tr>
+            <td>40 km</td>
+            <td>24.8548 mi</td>
+        </tr>
+        <tr>
             <td>50 km</td>
             <td>31.069 mi</td>
+        </tr>
+        <tr>
+            <td>70 km</td>
+            <td>43.496 mi</td>
+        </tr>
+        <tr>
+            <td>100 km</td>
+            <td>62.1371 mi</td>
         </tr>
         <!-- Add more rows for other conversions -->
     </table>
