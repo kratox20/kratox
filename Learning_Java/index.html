@@ -5,9 +5,34 @@
     <title>coconvert</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <style>
+    .custom-h4 {
+      color: #333;
+    }
+
+    .custom-h2 {
+      font-weight: 600; /* Font weight for a bit of emphasis */
+      color: #333; /* Dark text color for readability */
+    }
+
+  </style>
 <body>
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
-    <center><h1>Length Unit Converter</h1></center>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">CoConverter</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Donation</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        </ul>
+      </header>    
+      <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <h1 class="text-center mb-4">Length Unit Converter</h1>
     <form id="conversion-form" class="form-horizontal" action="#" method="POST">
         <div class="row">
             <div class="col-md-4">
@@ -114,8 +139,9 @@
     </script>
 
 <div class="mt-5">
-    <h4>Is there a simple way to convert Kilometers to Miles in my head?</h4>
-    <p>
+    <h4 class="custom-h4">Is there a simple way to convert Kilometers to Miles in my head?</h4>
+    <div class="container">
+    <p class="mb-4">
         We have two methods to get a close value. The actual formula is mi = km * 0.62137119 but our methods are easier to do in your head.<br><br>
         The first method is to multiply the kilometres value by 0.6.<br><br>
         The second, more accurate method, is to multiply the kilometers value by 2 and then divide by 3.<br><br>
@@ -124,29 +150,39 @@
         Second method: 1 kilometer * 2 = 2.0, 2 / 3 = 0.666667 miles<br><br>
         The actual answer is 0.62137119 miles, so these methods are close enough for many purposes
     </p>
-    <h4>How many Kilometers are in 1 Mile?</h4>
-    <p>
-        There are 1.609344 Kilometers in 1 Mile
+    </div>
+    <h4 class="custom-h4">How many Kilometers are in 1 Mile?</h4>
+    <div class="container">
+        <p class="mb-4">
+            There are 1.609344 Kilometers in 1 Mile
     </p>
-    <h4>How many Miles are in 1 Kilometer?</h4>
-    <p>There are 0.62137119 Miles in 1 Kilometer</p>
-    <h4>How long is 1 Kilometer?</h4>
-    <p>
-        <strong>1 Kilometer:</strong> The distance traveled in 9 to 12 minutes walking at a normal pace.<br><br>
+    </div>
+    <h4 class="custom-h4">How many Miles are in 1 Kilometer?</h4>
+    <div class="container">
+        <p class="mb-4">
+            There are 0.62137119 Miles in 1 Kilometer</p>
+    </div>
+    <h4 class="custom-h4">How long is 1 Kilometer?</h4>
+    <div class="container">
+        <p class="mb-4">
+            <strong>1 Kilometer:</strong> The distance traveled in 9 to 12 minutes walking at a normal pace.<br><br>
         <strong>4 Kilometers:</strong> The length of Central Park, NY.<br><br>
         <strong>5 Kilometers:</strong> The furthest distance that can be seen on earth to the horizon.<br><br>
         <strong>12,713.6 Kilometers:</strong> The distance from the North to South Pole.
     </p>
+    </div>
 
-    <h4>How long is 1 Mile?</h4>
-    <p>
+    <h4 class="custom-h4">How long is 1 Mile?</h4>
+    <div class="container">
+        <p class="mb-4">
         <strong>1 Mile:</strong> Distance walked in 15-20 minutes by an average person.<br><br>
         <strong>2.5 Miles:</strong> Approximate length of Central Park, NY.<br><br>
         <strong>3.1 Miles:</strong> The furthest distance that can be seen on earth to the horizon.<br><br>
         <strong>7,900 Miles:</strong> The approximate distance from the North to South Pole.
     </p>
+    </div>
 
-    <h2>Kilometers to Miles Conversion Table</h2>
+    <h2 class="custom-h2">Kilometers to Miles Conversion Table</h2>
     
     <table class="table table-striped">
         <tr>
@@ -207,7 +243,7 @@
           <section class="mb-4">
             <!-- Facebook -->
             <button type="button" class="btn btn-primary btn-rounded" data-mdb-ripple-init>Linekdin</button>
-            <button type="button" class="btn btn-primary btn-rounded" style="background-color: #c32aa3;" data-mdb-ripple-init>Instagram</button> 
+            <button type="button" class="btn btn-primary btn-rounded" style="background-color: #c32aa3;" data-mdb-ripple-init>Instagraml</button> 
             <button type="button" class="btn btn-success btn-rounded" data-mdb-ripple-init>Facebook</button>
             <button type="button" class="btn btn-danger btn-rounded" data-mdb-ripple-init>Buy me a coffee</button>
             <br><br>
