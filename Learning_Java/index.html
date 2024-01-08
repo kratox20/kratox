@@ -15,6 +15,44 @@
       color: #333; /* Dark text color for readability */
     }
 
+    footer {
+        text-align: center;}
+
+    .footer-container {
+        background-color: #95AAB6;
+        display: flex;}
+
+    .footer-container a {
+        color: #F5F6F7;
+        padding: 42px 16px;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: medium;}
+
+    .footer-left {
+        margin-right: auto}
+
+    .fa:hover {
+        color: #45405F;}
+
+    .footer-icons {
+        justify-content: space-between;
+        padding: 16px 64px 0px 0px}
+
+    .footer-icons ul {
+        list-style-type: none;}
+
+    .footer-icons li {
+        display: inline-block;}
+
+    .footer-right {
+        margin-left: auto}
+
+    .copyright 
+        {background-color: #F5F6F7;
+        overflow: hidden;}
+
   </style>
 <body>
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -235,33 +273,22 @@
         </tr>
         <!-- Add more rows for other conversions -->
     </table>
-
-    <footer class="bg-body-tertiary text-center">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-          <!-- Section: Social media -->
-          <section class="mb-4">
-            <!-- Facebook -->
-            <button type="button" class="btn btn-primary btn-rounded" data-mdb-ripple-init>Linekdin</button>
-            <button type="button" class="btn btn-primary btn-rounded" style="background-color: #c32aa3;" data-mdb-ripple-init>Instagraml</button> 
-            <button type="button" class="btn btn-success btn-rounded" data-mdb-ripple-init>Facebook</button>
-            <button type="button" class="btn btn-danger btn-rounded" data-mdb-ripple-init>Buy me a coffee</button>
-            <br><br>
-                <button id="lightModeBtn" type="button" class="btn btn-light">Light</button>
-                <button id="darkModeBtn" type="button" class="btn btn-dark">Dark</button>
-            <!-- Section: Social media -->
-        </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2020 Copyright:
-          <a class="text-body" href="https://mdbootstrap.com/">CoConvert.com</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
-      
 </div>
     </div>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
+  </footer>      
+
 </body>
 </html>
