@@ -1,10 +1,10 @@
 #    <----------Methode 1: ------------>
 
 
-name = input("enter your name : ")
+name = None
 
 while not name:
-    name = print(input("please enter your name : "))
+    name = input("please enter your name : ")
 
 print("hello " + name)
 
