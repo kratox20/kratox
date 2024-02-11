@@ -10,4 +10,4 @@ print(reversed_name)
 website1 = "http://youcan.ma"
 
 name_of_site = slice(7,-3)
-print(website1[name_of_site]) #-----> output: youcan
+print(website1[name_of_site]) #-----> output: youcan #
