@@ -1,5 +1,23 @@
 
-<p>Hello</p>
+![Gaming Account Marketplace Logo](./src/Assets/laptop.jpg)
+
+## Table of Contents
+1. [Project Description](#project-description)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [CI/CD Pipeline](#cicd-pipeline)
+6. [Infrastructure](#infrastructure)
+7. [Monitoring and Logging](#monitoring-and-logging)
+8. [Security](#security)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Contact](#contact)
+
+## Project Description
+Gaming Account Marketplace is a SaaS web application that enables users to buy gaming accounts using cryptocurrency. The platform ensures secure transactions and a seamless user experience for gamers worldwide.
+
+![Project Overview](./src/Assets/laptop.jpg)
 
 # Getting Started with Create React App
 
